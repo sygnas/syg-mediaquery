@@ -73,4 +73,4 @@ var syg_mediaquery = {
 return syg_mediaquery;
 
 })));
-//# sourceMappingURL=syg-jp-social-share.js.map
+//# sourceMappingURL=syg-mediaquery.js.map

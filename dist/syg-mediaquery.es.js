@@ -65,4 +65,4 @@ var syg_mediaquery = {
 };
 
 export default syg_mediaquery;
-//# sourceMappingURL=syg-jp-social-share.es.js.map
+//# sourceMappingURL=syg-mediaquery.es.js.map
