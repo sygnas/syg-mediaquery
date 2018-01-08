@@ -18,7 +18,7 @@ const paths = {
 let fileName,
     Configure;
 
-fileName = process.env.NODE_ENV !== 'production' ? 'syg-mediaquery' : 'syg-mediaquery.min';
+fileName = process.env.NODE_ENV !== 'production' ? 'mediaquery' : 'mediaquery.min';
 
 Configure = {
     entry: `${paths.source.root}index.js`,

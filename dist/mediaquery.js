@@ -1,3 +1,9 @@
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+	typeof define === 'function' && define.amd ? define(factory) :
+	(global['syg-mediaquery'] = factory());
+}(this, (function () { 'use strict';
+
 /**
  * check media query
  *
@@ -64,5 +70,7 @@ var syg_mediaquery = {
     }
 };
 
-export default syg_mediaquery;
-//# sourceMappingURL=syg-mediaquery.es.js.map
+return syg_mediaquery;
+
+})));
+//# sourceMappingURL=mediaquery.js.map

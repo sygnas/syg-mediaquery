@@ -8,12 +8,12 @@ Javascript でメディアクエリーの管理を簡単にする。
 ## Usage
 ### Install
 ```sh
-npm install syg-mediaquery
+npm install --save @sygnas/mediaquery
 ```
 
 ### Script
 ```JavaScript
-import mediaquery from 'syg-mediaquery';
+import mediaquery from '@sygnas/mediaquery';
 
 // メディアクエリーを設定
 mediaquery.set_media('pc', 'screen and (min-width: 801px)');

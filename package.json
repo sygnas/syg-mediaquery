@@ -1,9 +1,9 @@
 {
-  "name": "syg-mediaquery",
+  "name": "@sygnas/mediaquery",
   "version": "1.1.1",
-  "description": "",
-  "main": "dist/syg-mediaquery.js",
-  "module": "dist/syg-mediaquery.es.js",
+  "description": "Check media query. Javascript でメディアクエリーの管理を簡単にする。",
+  "main": "dist/mediaquery.js",
+  "module": "dist/mediaquery.es.js",
   "moduleName": "syg-mediaquery",
   "private": false,
   "repository": {
