@@ -29,6 +29,15 @@ console.log(mediaquery.get_hit_medias());
 
 ## Methods
 
+### get_query_string()
+
+メディアクエリーとして指定した文字列を取得。
+
+#### 戻り値
+
+文字列を含むオブジェクト。
+
+
 ### set_media(name, value)
 
 メディアクエリーの名前と文字列を登録する。

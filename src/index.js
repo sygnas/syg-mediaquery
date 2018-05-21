@@ -17,6 +17,14 @@ const syg_mediaquery = {
     },
 
     /**
+     * get query string
+     * @returns {Object}
+     */
+    get_query_string(){
+      return syg_mediaquery._medias;
+    },
+
+    /**
      * set media query
      * @param name {String} media name
      * @param value {String} media query string

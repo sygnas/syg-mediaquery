@@ -1,6 +1,6 @@
 {
   "name": "@sygnas/mediaquery",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Check media query. Javascript でメディアクエリーの管理を簡単にする。",
   "main": "dist/mediaquery.js",
   "module": "dist/mediaquery.es.js",
