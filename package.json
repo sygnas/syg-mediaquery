@@ -1,11 +1,9 @@
 {
   "name": "@sygnas/mediaquery",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Check media query. Javascript でメディアクエリーの管理を簡単にする。",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "types": "types/index.d.ts",
-  "browser": "dist/mediaquery.js",
+  "main": "dist/commonjs/index.js",
+  "module": "dist/es6/index.js",
   "moduleName": "sygMediaquery",
   "private": false,
   "repository": {
@@ -16,8 +14,7 @@
     "start": "npm run watch",
     "watch": "rollup -w -c rollup.config.js",
     "build": "rm -rf dist && rollup -c rollup.config.js",
-    "types": "rm -rf types && tsc -d --outDir types --noEmit false --emitDeclarationOnly true",
-    "production": "npm run build && npm run types",
+    "demo": "rollup -c rollup.demo.config.js",
     "lint": "eslint src"
   },
   "keywords": [

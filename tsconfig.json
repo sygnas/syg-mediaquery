@@ -11,7 +11,7 @@
     // "disableReferencedProjectLoad": true,
 
     /* Language and Environment */
-    "target": "es5",
+    "target": "ESNext",   // Babelで変換するので最新にする
     // "lib": [],
     // "jsx": "react",
     // "experimentalDecorators": true,
@@ -24,7 +24,7 @@
     // "useDefineForClassFields": true,
 
     /* Modules */
-    "module": "esnext",
+    "module": "ES6",
     // "rootDir": "./",
     "moduleResolution": "node",
     "baseUrl": "./",
@@ -47,9 +47,9 @@
     // "declaration": true,
     // "declarationMap": true,
     // "emitDeclarationOnly": true,
-    // "sourceMap": true,
+    "sourceMap": true,
     // "outFile": "./",
-    "outDir": "./dist",
+    // "outDir": "./dist",
     // "removeComments": true,
     "noEmit": true,
     // "importHelpers": true,
@@ -99,6 +99,6 @@
     // "skipDefaultLibCheck": true,
     "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "types/**/*.d.ts"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
 }

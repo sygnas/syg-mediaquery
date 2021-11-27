@@ -7,10 +7,15 @@ Javascript でメディアクエリーの管理を簡単にする。
 
 ## History
 
+- 2021.11.27　ver.2.1.0
+  - ブラウザ用を削除
+  - 出力先を見直し
+  - メソッド名一部変更
 - 2021.11.22　ver.2.0.0
   - TypeScript で書き直し。
   - メソッド名を全て変更。
 
+---
 
 ## Usage
 
@@ -22,37 +27,42 @@ npm install --save @sygnas/mediaquery
 
 ### JavaScript
 ```JavaScript
-import mediaquery from '@sygnas/mediaquery';
+import Mediaquery from '@sygnas/mediaquery';
 
 // メディアクエリーを設定
-mediaquery.setMedia('pc', 'screen and (min-width: 801px)');
-mediaquery.setMedia('sp', 'screen and (max-width: 800px)');
+Mediaquery.addMedia('pc', 'screen and (min-width: 801px)');
+Mediaquery.addMedia('sp', 'screen and (max-width: 800px)');
 
-if (mediaquery.isMedia('pc')) {
+if (Mediaquery.isMedia('pc')) {
   console.log("メディアクエリー PC に該当");
 }
 
-console.log(mediaquery.getHitMedias());
+console.log(Mediaquery.getHitMedias());
 // ["pc"]
 ```
 
+---
 ## Methods
 
-### getQueryString()
+### getMedias
+
+```
+static getMedias(): object
+```
 
 メディアクエリーとして指定した文字列を取得。
 
-#### 戻り値
 
-文字列を含むオブジェクト。
+### addMedia
 
-
-### setMedia(name, value)
+```
+static addMedia(name: string, value: string): void
+```
 
 メディアクエリーの名前と文字列を登録する。
 
 ```
-mediaquery.setMedia('pc', 'screen and (min-width: 801px)');
+Mediaquery.addMedia('pc', 'screen and (min-width: 801px)');
 ```
 
 | 引数 | 型 | 説明 |
@@ -60,38 +70,34 @@ mediaquery.setMedia('pc', 'screen and (min-width: 801px)');
 | name | String | メディアクエリー名 |
 | value | String | クエリー文字列 |
 
-初期状態では下記の3つが登録されている。
+
+### removeMedia
 
 ```
-medias: {
-  large: 'screen and (min-width:801px)',
-  tablet: 'screen and (min-width:601px) and (max-width:800px)',
-  mobile: 'screen and (max-width:600px)'
-},
+static removeMedia(name: string): void
 ```
 
-### resetMedias(medias)
-
-メディアクエリーの一覧をまとめて登録。
-既に登録されているものは削除される。
+メディアクエリーを削除する。
 
 ```
-mediaquery.resetMedias({
-  pc: 'screen and (min-width: 801px)',
-  sp: 'screen and (max-width: 800px)'
-});
+Mediaquery.removeMedia('pc');
 ```
 
 | 引数 | 型 | 説明 |
 | ---- | -- | ---- |
-| medias | Object | key: メディアクエリー名 / value: クエリー文字列 |
+| name | String | メディアクエリー名 |
 
-### isMedia(name)
+
+### isMedia
+
+```
+static isMedia(name: string): boolean
+```
 
 指定したメディアクエリー名に該当するかを判定。
 
 ```
-const is_pc = mediaquery.isMedia('pc');
+const is_pc = Mediaquery.isMedia('pc');
 ```
 
 | 引数 | 型 | 説明 |
@@ -104,17 +110,17 @@ const is_pc = mediaquery.isMedia('pc');
 それ以外は `false` を返す。
 
 
-### getHitMedias()
+### getHitMedias
+
+```
+static getHitMedias(): string[]
+```
 
 該当するメディアクエリー名の配列を取得。
 
 ```
-const hit_medias = mediaquery.getHitMedias();
+const hit_medias = Mediaquery.getHitMedias();
 ```
-
-#### 戻り値
-
-該当するメディアクエリーの名前の Array。
 
 
 ## License
